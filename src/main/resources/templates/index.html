@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>Spring Boot - AJAX POST GET Example</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/postrequest.js"></script>
+    <script src="/js/getrequest.js"></script>
+    <script src="/js/putrequest.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h3 style="color:blue">To Do List Example</h3>
+
+    <div>
+        <form class="form-inline" style="margin:20px 20px 20px 20px" id="todolistForm">
+            <div class="form-group">
+                <label for="name" style="margin-right:5px">Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name"/>
+            </div>
+            <div class="form-group">
+                <label for="content" style="margin-left:20px; margin-right:5px">Content:</label>
+                <input type="text" class="form-control" id="content" placeholder="Enter Content"/>
+            </div>
+            <button type="submit" class="btn btn-default" style="margin-left:20px; margin-right:5px">Submit</button>
+        </form>
+    </div>
+
+    <div class="col-sm-7" id="postResultDiv">
+    </div>
+
+    <br>
+    <div>
+        <form class="form-inline" style="margin:20px 20px 20px 20px" id="todolistUpdateForm">
+            <div class="form-group">
+                <label for="updateId" style="margin-right:5px">ID:</label>
+                <input type="text" class="form-control" id="updateId" placeholder="Enter ID"/>
+            </div>
+            <div class="form-group">
+                <label for="updateName" style="margin-left:20px; margin-right:5px">Name:</label>
+                <input type="text" class="form-control" id="updateName" placeholder="Enter New Name"/>
+            </div>
+            <div class="form-group">
+                <label for="updateContext" style="margin-left:20px; margin-right:5px">Context:</label>
+                <input type="text" class="form-control" id="updateContext" placeholder="Enter New Context"/>
+            </div>
+            <button type="submit" class="btn btn-default" style="margin-left:20px; margin-right:5px">Submit</button>
+        </form>
+    </div>
+
+    <div class="col-sm-7" id="putResultDiv">
+    </div>
+
+    <br>
+    <h1>ToDoList Table</h1>
+    <div>
+        <table id="toDoListTable" width="600" border="1">
+            <thead>
+            <tr>
+                <th width="50">ID</th>
+                <th width="100">Name</th>
+                <th width="400">CONTENT</th>
+                <th width="50">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div id="resultMsgDiv">
+        </div>
+    </div>
+
+
+    <br>
+    <div class="col-sm-7" style="margin:20px 0px 20px 0px">
+    <button id="getAllToDoListId" type="button" class="btn btn-primary">Get All ToDoList</button>
+    <div id="getResultDiv" style="padding:20px 10px 20px 50px">
+    <ul class="list-group">
+    </ul>
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
